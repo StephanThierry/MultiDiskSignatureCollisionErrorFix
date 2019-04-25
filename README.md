@@ -8,7 +8,7 @@ You will be faced with an issue:
 "This disk is offline because it has a signature collision with another disk that is online"   
 
 This can be solved using DiskPart from the cmd-prompt (in admin mode):
-Assuming your USB is disk 1, and that on other drive has the ID=12345678:
+Assuming your USB is disk 1, and that no other drive has the ID=12345678:
 
 ```select disk 1   
 uniqueid disk id=12345678  
