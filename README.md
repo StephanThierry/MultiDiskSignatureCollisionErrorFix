@@ -10,7 +10,8 @@ You will be faced with an issue:
 This can be solved starting ```DiskPart``` from the cmd-prompt (in admin mode):
 Assuming your first USB is disk 1, and that no other drive has the ID "12345678":
 
-```select disk 1   
+```
+select disk 1   
 uniqueid disk id=12345678  
 exit
 ```
