@@ -21,4 +21,4 @@ Instead you can use the included: ```run.bat``` file by calling ```run ##``` whe
 
 NOTE! The script will start from the 2nd drive (DISK 1) and continue until DISK ## - meaning the DISK you entered in your param.  So this only works if  your PC only has 1 drive already installed.  If not you'll need to change the ```random.bat``` which created the DiskPart script. 
 
-Line 2 of random.bat is: ```set "x=1"``` change that to the starting point for your system like: ```set "x=4"``` - if you want to run it on 5 drives you will now need to use ```run 9``` since there are 5 drives between 4 and 9.  
+Line 2 of random.bat is: ```set "x=1"``` change that to the starting point for your system like: ```set "x=4"``` - if you want to run it on 5 drives you will now need to use ```run 9``` since there are 5 drives in the interval 4 - 9.  
