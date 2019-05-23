@@ -1,4 +1,5 @@
 # Multiple "Disk Signature Collision Error"-fix
+> How to fix disk signature collision error
 
 After creating multiple USB sticks with the same image using the highly recommended tool: 
 USB Image Tool 1.76  by Alexander Beug  
