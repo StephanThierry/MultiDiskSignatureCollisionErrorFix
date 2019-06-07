@@ -19,8 +19,33 @@ exit
 
 This will solve the problem - but you will need to manually run these 2 commands for each drive and choose a different number every time.  
 
-Instead you can use the included: ```run.bat``` file by calling ```run ##``` where ## is the number of drives you want to create IDs for.  
+Instead you can use the included: ```run.bat``` file by calling ```Run [start_disk] [end_disk]``` where [start_disk] is the fist logical disk and [end_disk] is the last logical disk to apply the change to.  
 
-NOTE! The script will start from the 2nd drive (DISK 1) and continue until DISK ## - meaning the DISK you entered in your param.  So this only works if  your PC only has 1 drive already installed.  If not you'll need to change the ```random.bat``` which created the DiskPart script. 
+If you run without parameters you will get a list of all disks connected to the system.
 
-Line 2 of random.bat is: ```set "x=1"``` change that to the starting point for your system like: ```set "x=4"``` - if you want to run it on 5 drives you will now need to use ```run 9``` since there are 5 drives in the interval 4 - 9.  
+`Microsoft DiskPart version 10.0.17763.1  
+  
+Copyright (C) Microsoft Corporation.  
+On computer: [PC-NAME]  
+  
+  Disk ###  Status         Size     Free     Dyn  Gpt  
+  --------  -------------  -------  -------  ---  ---  
+  Disk 0    Online          465 GB  1024 KB  
+  Disk 1    Online          931 GB  1024 KB  
+  Disk 2    Offline          29 GB      0 B   
+  Disk 3    Online           29 GB      0 B  
+  Disk 4    Offline          29 GB      0 B  
+  Disk 5    No Media           0 B      0 B  
+  Disk 6    No Media           0 B      0 B  
+  Disk 7    No Media           0 B      0 B  
+  Disk 8    No Media           0 B      0 B  
+  Disk 9    Offline          29 GB      0 B  
+  Disk 10   Offline          29 GB      0 B  
+  Disk 11   Offline          29 GB      0 B  
+  Disk 12   Offline          29 GB      0 B  
+`
+
+In this overview you can see that the USB's 2-4 and 9-12 are affected by the issue - only 1 is "Online" the rest are "Offline". 
+In this case calling `run 2 4` and `run 9 12` will solve the problem.   
+
+Note! You need to disconnect the USB's for Windows to re-read the values. So they will not come online straight after running the command.  
