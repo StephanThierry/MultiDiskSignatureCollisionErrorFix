@@ -23,7 +23,8 @@ Instead you can use the included: ```run.bat``` file by calling ```Run [start_di
 
 If you run without parameters you will get a list of all disks connected to the system.
 
-`Microsoft DiskPart version 10.0.17763.1  
+```
+Microsoft DiskPart version 10.0.17763.1  
   
 Copyright (C) Microsoft Corporation.  
 On computer: [PC-NAME]  
@@ -43,7 +44,7 @@ On computer: [PC-NAME]
   Disk 10   Offline          29 GB      0 B  
   Disk 11   Offline          29 GB      0 B  
   Disk 12   Offline          29 GB      0 B  
-`
+```
 
 In this overview you can see that the USB's 2-4 and 9-12 are affected by the issue - only 1 is "Online" the rest are "Offline". 
 In this case calling `run 2 4` and `run 9 12` will solve the problem.   
