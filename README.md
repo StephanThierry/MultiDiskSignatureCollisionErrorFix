@@ -46,7 +46,7 @@ On computer: [PC-NAME]
   Disk 12   Offline          29 GB      0 B  
 ```
 
-In this overview you can see that the USB's 2-4 and 9-12 are affected by the issue - only 1 is "Online" the rest are "Offline". 
+In this overview you can see that the USB's 2-4 and 9-12 are affected by the issue - only Disk 3 is "Online" the rest are "Offline". 
 In this case calling `run 2 4` and `run 9 12` will solve the problem.   
 
 Note! You need to disconnect the USB's for Windows to re-read the values. So they will not come online straight after running the command.  
